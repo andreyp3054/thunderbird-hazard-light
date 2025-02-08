@@ -33,27 +33,27 @@ git clone https://github.com/andreyp3054/thunderbird-hazard-light.git
 cd thunderbird-hazard-light
 
 ```
-2️⃣ Open in Quartus
-Open project.qpf in Intel Quartus Prime.
-Compile the project by clicking Start Compilation.
-Run simulations in ModelSim/Questa if needed.
+### **2️⃣ Open in Quartus  
+Open project.qpf in Intel Quartus Prime.  
+Compile the project by clicking Start Compilation.  
+Run simulations in ModelSim/Questa if needed.  
 
-3️⃣ Upload to FPGA
-Connect your FPGA board.
-Use Quartus Programmer to upload the bitstream.
+### **3️⃣ Upload to FPGA  
+Connect your FPGA board.  
+Use Quartus Programmer to upload the bitstream.  
 
-🎯 Usage
-🔹 Simulation
-vsim -do run_test.do
-Open ModelSim/Questa and load testbench.sv.
-Run waveform analysis.
+### **🎯 Usage  
+#🔹 Simulation  
+vsim -do run_test.do  
+Open ModelSim/Questa and load testbench.sv.  
+Run waveform analysis.  
 
-🔹 Hardware Deployment
-Flash the .sof file onto your FPGA using Quartus Programmer.
-Connect the system to the Thunderbird hazard light circuit.
-Verify synchronized blinking.
+#🔹 Hardware Deployment
+Flash the .sof file onto your FPGA using Quartus Programmer.  
+Connect the system to the Thunderbird hazard light circuit.  
+Verify synchronized blinking.  
 
-# 📌 Pin Configuration
+## 📌 Pin Configuration
 | **Pin Name** | **Function** | **Description** |
 |-------------|-------------|----------------|
 | clk       | Clock Input  | Provides the system clock signal. |
@@ -63,25 +63,25 @@ Verify synchronized blinking.
 | right_sig | Right Signal Light | Controls the right turn indicator. |
 | lights    | Output LEDs | Represents the hazard light blinking pattern. |
 
-![Pin Configuration](images/pin_config.png)
+![Pin Configuration](images/pin_config.png)  
 
-📸 Screenshots & Diagrams
+## 📸 Screenshots & Diagrams  
 
-⚙️ Technologies Used
-FPGA Toolchain: Intel Quartus Prime
-Languages: Verilog / VHDL
-Simulation: ModelSim / Questa
-Hardware: FPGA & Thunderbird electrical system
+## ⚙️ Technologies Used  
+FPGA Toolchain: Intel Quartus Prime  
+Languages: Verilog / VHDL  
+Simulation: ModelSim / Questa  
+Hardware: FPGA & Thunderbird electrical system  
 
-🛠️ To-Do List
- Create an algorithm for the hazard pattern in thunderbird
- Create a wrapper file to map the params to pins
- Create and integrate clock divider file to decrease LED blinking speed
- Implement the code in FPGA with correct LED pins
+## 🛠️ To-Do List  
+ Create an algorithm for the hazard pattern in thunderbird  
+ Create a wrapper file to map the params to pins  
+ Create and integrate clock divider file to decrease LED blinking speed  
+ Implement the code in FPGA with correct LED pins  
 
-## 📜 License
-This project is for educational purposes only. The **clock divider file** was provided by Professor Stephen Haim from MSU-IIT, along with the lab activity manual. The **algorithm for the hazard blinking pattern** was developed by me, while the remaining code files were created collaboratively by my partner and me.
+## 📜 License  
+This project is for educational purposes only. The **clock divider file** was provided by Professor Stephen Haim from MSU-IIT, along with the lab activity manual and the hardware resources. The **algorithm for the hazard blinking pattern** was developed by me, while the remaining code files were created collaboratively by my partner and me.
 
-💬 Contact
-📧 Email: markandrey.acebu@gmail.com
-🔗 LinkedIn: Mark Andrey Acebu
+## 💬 Contact  
+📧 Email: markandrey.acebu@gmail.com  
+🔗 LinkedIn: Mark Andrey Acebu  
