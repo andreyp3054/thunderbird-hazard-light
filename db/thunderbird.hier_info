@@ -1,0 +1,85 @@
+|thunderbird_wrapper
+Clk => Clk.IN1
+reset => reset.IN2
+left => left.IN1
+right => right.IN1
+L[0] << thunderbird:uut.L
+L[1] << thunderbird:uut.L
+L[2] << thunderbird:uut.L
+R[0] << thunderbird:uut.R
+R[1] << thunderbird:uut.R
+R[2] << thunderbird:uut.R
+
+
+|thunderbird_wrapper|clk_div:clk
+clk => clk_count[0].CLK
+clk => clk_count[1].CLK
+clk => clk_count[2].CLK
+clk => clk_count[3].CLK
+clk => clk_count[4].CLK
+clk => clk_count[5].CLK
+clk => clk_count[6].CLK
+clk => clk_count[7].CLK
+clk => clk_count[8].CLK
+clk => clk_count[9].CLK
+clk => clk_count[10].CLK
+clk => clk_count[11].CLK
+clk => clk_count[12].CLK
+clk => clk_count[13].CLK
+clk => clk_count[14].CLK
+clk => clk_count[15].CLK
+clk => clk_count[16].CLK
+clk => clk_count[17].CLK
+clk => clk_count[18].CLK
+clk => clk_count[19].CLK
+clk => clk_count[20].CLK
+clk => clk_count[21].CLK
+clk => clk_count[22].CLK
+clk => clk_count[23].CLK
+clk => clk_count[24].CLK
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+rst => clk_count.OUTPUTSELECT
+clk_en <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|thunderbird_wrapper|thunderbird:uut
+Clk => state_p~1.DATAIN
+reset => state_p~3.DATAIN
+left => always1.IN0
+left => state_n.DATAA
+left => state_n.DATAA
+right => always1.IN1
+right => state_n.OUTPUTSELECT
+right => state_n.OUTPUTSELECT
+right => state_n.DATAA
+L[0] <= L.DB_MAX_OUTPUT_PORT_TYPE
+L[1] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+L[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+R[0] <= R.DB_MAX_OUTPUT_PORT_TYPE
+R[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+R[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+
+

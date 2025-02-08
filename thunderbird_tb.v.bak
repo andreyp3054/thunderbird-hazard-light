@@ -1,0 +1,75 @@
+module thunderbird_tb;
+    // Inputs
+    reg clk;
+    reg reset;
+    reg left;
+    reg right;
+
+    // Outputs
+    wire [2:0] L;  // Left 3-bit output
+    wire [2:0] R;  // Right 3-bit output
+
+    // Instantiate the Unit Under Test (UUT)
+    thunderbird uut (
+        .Clk(clk),
+        .reset(reset),
+        .left(left),
+        .right(right),
+        .L(L),
+        .R(R)
+    );
+
+    // Clock generation
+    always begin
+        #5 clk = ~clk;  // Generate 100 MHz clock (10 ns period)
+    end
+
+    initial begin
+        // Initialize Inputs
+        clk = 0;
+        reset = 0;
+        left = 0;
+        right = 0;
+
+        // Dump waveform to a VCD file
+        $dumpfile("thunderbird_tb.vcd");
+        $dumpvars(0, thunderbird_tb);
+
+        // Test sequence
+        $display("Applying reset...");
+        reset = 1; #10;
+        reset = 0; #10;
+
+        // Test Left Button Press
+        $display("Testing left press...");
+        left = 1; right = 0;  // Left press should transition through L1, L2, L3, Off
+        #50;
+        left = 0; right = 0;
+        #40;
+
+        // Test Right Button Press
+      
+        $display("Testing right press...");
+        left = 0; right = 1; 
+        #100 // Right press should transition through R1, R2, R3, Off
+        // #40;
+        // left = 0; right = 0;
+        // #20;
+
+        // Test Both Buttons Pressed Simultaneously
+        $display("Testing both left and right press...");
+        left = 1; right = 1;  // Both buttons pressed (left and right)
+        #200;
+        left = 0; right = 0;
+        #20;
+
+        // End simulation
+        $finish;
+    end
+
+    // Monitor output signals for debugging
+    initial begin
+        $monitor("At time %t, L = %b, R = %b, left = %b, right = %b", 
+                 $time, L, R, left, right);
+    end
+endmodule

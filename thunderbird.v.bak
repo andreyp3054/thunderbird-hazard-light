@@ -1,0 +1,64 @@
+module thunderbird(
+    input Clk,
+    input reset,
+    input left,
+    input right,
+    output reg [2:0] L,
+    output reg [2:0] R
+);
+    localparam Off = 3'b000,
+               L1 = 3'b001,
+               L2 = 3'b010,
+               L3 = 3'b111,
+               R1 = 3'b100,
+               R2 = 3'b101,
+               R3 = 3'b110,
+               LR = 3'b111;
+                 
+    reg [2:0] state_p, state_n;
+    wire in_sequence;
+
+//d flip-flop
+   always @(posedge Clk or reset)
+   if(reset)
+   state_p <= Off; 
+   else 
+   state_p <= state_n;  
+
+
+wire is_active = (state_p == L1) || (state_p === L2) || (state_p == L3) || (state_p == R1) || (state_p == R2) || (state_p == R3); 
+
+//action when pressed
+always @(*) begin
+   case(state_p)
+
+   Off: if(left && !is_active) state_n = L1;
+        else if(right && !is_active) state_n = R1; 
+        else if(right && left && !is_active) state_n = Off;  
+        else state_n = Off;
+   L1: state_n = L2;
+   L2: state_n = L3; 
+   L3: state_n = Off;  
+   R1: state_n = R2; 
+   R2: state_n = R3;
+   R3: state_n = Off; 
+
+endcase
+end
+
+
+always @(*) begin 
+   case(state_p)
+   L1:  {L, R} = 6'b001000; 
+   L2:  {L, R} = 6'b011000;
+   L3:  {L, R} = 6'b111000;
+
+   R1:  {L, R} = 6'b000100;
+   R2:  {L, R} = 6'b000001;
+   R3:  {L, R} = 6'b000001;
+   
+   Off: {L, R} = 6'b000000;
+   endcase
+end 
+
+endmodule

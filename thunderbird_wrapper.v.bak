@@ -1,0 +1,7 @@
+thunder_wrapper(input Clk,
+    input reset,
+    input left,
+    input right,
+    output reg [2:0] L,
+    output reg [2:0] R
+);

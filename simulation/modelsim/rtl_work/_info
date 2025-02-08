@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/quartus/laboratory_activities/lab9/simulation/modelsim
+vclk_div
+Z1 !s110 1733981968
+!i10b 1
+!s100 B<fCS7hY50P^WPKeDHZPI1
+I0LPP=lVYH[[BD:Sb:55CC0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1733973139
+8D:/quartus/laboratory_activities/lab9/clk_div.v
+FD:/quartus/laboratory_activities/lab9/clk_div.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1733981967.000000
+!s107 D:/quartus/laboratory_activities/lab9/clk_div.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/quartus/laboratory_activities/lab9|D:/quartus/laboratory_activities/lab9/clk_div.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work +incdir+D:/quartus/laboratory_activities/lab9
+Z6 tCvgOpt 0
+vthunderbird
+Z7 !s110 1733982006
+!i10b 1
+!s100 S?=TRG<HHVdNknC>R=;lm0
+ImldCc3BEc:;e]5JDKnJVJ1
+R2
+R0
+w1733981494
+8D:/quartus/laboratory_activities/lab9/thunderbird.v
+FD:/quartus/laboratory_activities/lab9/thunderbird.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1733982005.000000
+!s107 D:/quartus/laboratory_activities/lab9/thunderbird.v|
+!s90 -reportprogress|300|-work|work|D:/quartus/laboratory_activities/lab9/thunderbird.v|
+!i113 1
+Z8 o-work work
+R6
+vthunderbird_tb
+R7
+!i10b 1
+!s100 1ERkMWRo9[^o9InhC3c820
+I<M>>O2lnE9cD8MX^2F=_f3
+R2
+R0
+w1733975885
+8D:/quartus/laboratory_activities/lab9/thunderbird_tb.v
+FD:/quartus/laboratory_activities/lab9/thunderbird_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1733982006.000000
+!s107 D:/quartus/laboratory_activities/lab9/thunderbird_tb.v|
+!s90 -reportprogress|300|-work|work|D:/quartus/laboratory_activities/lab9/thunderbird_tb.v|
+!i113 1
+R8
+R6
+vthunderbird_wrapper
+R1
+!i10b 1
+!s100 G:ZlmFjFl`92^gQ>hiam@2
+IPP9aXd?HG91F>`ZL;KPP10
+R2
+R0
+w1733973138
+8D:/quartus/laboratory_activities/lab9/thunderbird_wrapper.v
+FD:/quartus/laboratory_activities/lab9/thunderbird_wrapper.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1733981968.000000
+!s107 D:/quartus/laboratory_activities/lab9/thunderbird_wrapper.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/quartus/laboratory_activities/lab9|D:/quartus/laboratory_activities/lab9/thunderbird_wrapper.v|
+!i113 1
+R4
+R5
+R6
