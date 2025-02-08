@@ -33,22 +33,22 @@ git clone https://github.com/andreyp3054/thunderbird-hazard-light.git
 cd thunderbird-hazard-light
 
 ```
-### **2️⃣ Open in Quartus  
+### 2️⃣ Open in Quartus  
 Open project.qpf in Intel Quartus Prime.  
 Compile the project by clicking Start Compilation.  
 Run simulations in ModelSim/Questa if needed.  
 
-### **3️⃣ Upload to FPGA  
+### 3️⃣ Upload to FPGA  
 Connect your FPGA board.  
 Use Quartus Programmer to upload the bitstream.  
 
-### **🎯 Usage  
-#🔹 Simulation  
+### 🎯 Usage  
+🔹 Simulation  
 vsim -do run_test.do  
 Open ModelSim/Questa and load testbench.sv.  
 Run waveform analysis.  
 
-#🔹 Hardware Deployment
+🔹 Hardware Deployment
 Flash the .sof file onto your FPGA using Quartus Programmer.  
 Connect the system to the Thunderbird hazard light circuit.  
 Verify synchronized blinking.  
