@@ -56,12 +56,13 @@ Verify synchronized blinking.
 ## 📌 Pin Configuration
 | **Pin Name** | **Function** | **Description** |
 |-------------|-------------|----------------|
-| clk       | Clock Input  | Provides the system clock signal. |
+| Clk       | Clock Input  | Provides the system clock signal. |
 | reset     | Reset Input  | Resets the hazard light system. |
-| hazard_sw | Hazard Switch | Activates the hazard blinking pattern. |
-| left_sig  | Left Signal Light | Controls the left turn indicator. |
-| right_sig | Right Signal Light | Controls the right turn indicator. |
-| lights    | Output LEDs | Represents the hazard light blinking pattern. |
+| left      | Left Signal Light | Controls the left turn indicator. |
+| right     | Right Signal Light | Controls the right turn indicator. |
+| [2:0]  L  | Left Signal Output LEDs | Represents the left signal lights blinking LEDS. |
+| [2:0]  r  | Right Signal Output LEDs | Represents the right signal lights blinking LEDS. |
+**Hazard light activates when both left and right switches are true.**
 
 ![Pin Configuration](images/pin_config.png)  
 
