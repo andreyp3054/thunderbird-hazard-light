@@ -32,6 +32,7 @@ This FPGA-based hazard light system is designed for **Ford Thunderbird vehicles*
 git clone https://github.com/andreyp3054/thunderbird-hazard-light.git
 cd thunderbird-hazard-light
 
+```
 2️⃣ Open in Quartus
 Open project.qpf in Intel Quartus Prime.
 Compile the project by clicking Start Compilation.
@@ -62,7 +63,7 @@ Verify synchronized blinking.
 | right_sig | Right Signal Light | Controls the right turn indicator. |
 | lights    | Output LEDs | Represents the hazard light blinking pattern. |
 
-![Pin Configuration](https://raw.githubusercontent.com/andreyp3054/thunderbird-hazard-light/main/images/pin_config.png)
+![Pin Configuration](images/pin_config.png)
 
 📸 Screenshots & Diagrams
 
